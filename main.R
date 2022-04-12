@@ -71,15 +71,8 @@ describeBy(df$price, group=df$generes)
 # necessário o dplyr
 
 
-
-
-tabela <- dados %>% group_by(Genero, Grau_de_Instruçao) %>% 
-  summarise(média = mean(Salario),
-            DP = sd(Salario),
-            mediana = median(Salario))
-
-
-
+# AGRUPANDO POR PUBLISHER
+tabela <- df %>% group_by(publisher) %>% summarize(soma = sum(price), média = mean(price))
 
 
 
